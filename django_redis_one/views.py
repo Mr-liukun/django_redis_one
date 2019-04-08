@@ -5,7 +5,7 @@ import pymysql
 import json
 
 def mysql(request):
-    pydb = pymysql.connect("172.17.0.2", "root", "123456", "onedb")
+    pydb = pymysql.connect("172.17.0.5", "root", "123456", "onedb")
     cu = pydb.cursor()
     cu.execute("select id, name, score from student")
     re = cu.fetchall()
